@@ -1,5 +1,5 @@
 import React from 'react';
-import { TopCont, Cont, ContLeft, ContCenter, ContRight, ContCenterSpan } from './StyledComponents';
+import { TopCont, Cont, ContLeft, ContCenter, ContRight } from './StyledComponents';
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
