@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from 'react-loader-spinner'
 
 import Tabs from './Tabs';
 import Cards from './Cards';
@@ -43,7 +44,8 @@ export default class Content extends Component {
   render() {
     return (
       <div className="content-container">
-        {/* 
+      <Loader type="ThreeDots" color="#somecolor" height={80} width={80} />
+        {/*  git
           Add 2 props to the Tabs component, 
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
