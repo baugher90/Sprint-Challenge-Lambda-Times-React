@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
 import Loader from 'react-loader-spinner';
+import { CardsContainer } from '../StyledComponents';
 
 const Cards = props => {
   if (props.cards.length === 0) {
@@ -9,14 +10,14 @@ const Cards = props => {
     return <Loader type="ThreeDots" color="#000000" height="100" width="100" />;
   }
   return (
-    <div className="cards-container">
+    <CardsContainer className="cards-container">
       {props.cards.map((card,index)=>(
         <Card 
         key={index}
         card={card}
         />
       ))}
-    </div>
+    </CardsContainer>
   )
 }
 

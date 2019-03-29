@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {CardCont,Headline, Author, ImageCont} from '../StyledComponents';
 
 const Card = props => {
   return (
-    <div className="card">
-      <div className="headline">{props.card.headline}</div><span>{props.card.tab}</span>
-      <div className="author">
-        <div className="img-container">
+    <CardCont className="card">
+      <Headline className="headline">{props.card.headline}</Headline><span>{props.card.tab}</span>
+      <Author className="author">
+        <ImageCont className="img-container">
           <img src={props.card.img} alt={props.card.author} />
-        </div>
+        </ImageCont>
         <span>By {props.card.author}</span>
-      </div>
-    </div>
+      </Author>
+    </CardCont>
   );
 };
 

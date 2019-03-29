@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TabCont } from '../StyledComponents';
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -8,20 +9,19 @@ const Tab = props => {
 
     if(props.selectedTab === "all") {
       return (
-        
-        <div
+        <TabCont
           className={'active'}
           onClick={ () => {
             console.log("tabClicked" , props.tab)
             props.selectTabHandler( props.tab )} }
         >
           {props.tab.toUpperCase()}
-        </div>
+        </TabCont>
       ) 
     }else
 
   return (
-    <div
+    <TabCont
       className={''}
       onClick={ () => {
         console.log("changeClicked" , props.tab)
@@ -31,7 +31,7 @@ const Tab = props => {
       }
     >
       {props.tab.toUpperCase()}
-    </div>
+    </TabCont>
   );
 };
 
