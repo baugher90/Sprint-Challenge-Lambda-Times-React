@@ -1,14 +1,20 @@
 import React from 'react';
 import Tab from './Tab';
+import { TabsCont, Topics, Title } from '../StyledComponents';
 const Tabs = props => {
   return (
-    <div className="tabs">
-      <div className="topics">
-        <span className="title">TRENDING TOPICS:</span>
-        {/* map over the tabs provided on your props, create a new Tab component for each one.
-            give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
-      </div>
-    </div>
+    <TabsCont className="tabs">
+      <Topics className="topics">
+        <Title className="title">TRENDING TOPICS:</Title>
+        {props.tabs.map((tab,index)=>(
+        <Tab 
+        key={index}
+        selectTabHandler={props.selectTabHandler}
+        selectedTab={props.selectedTab}
+        tab={tab}
+        />))}
+      </Topics>
+    </TabsCont>
   );
 };
 
